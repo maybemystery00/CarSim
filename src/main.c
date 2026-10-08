@@ -4,13 +4,16 @@
 
 int main(void)
 {
-    car car;
+    
     Simulation sim;
+    Car car;
     simulation_init(&sim,0.01);
     for (int i=0;i<10;i++)
     {
         printf("Time: %.2f s\n",sim.time);
         simulation_step(&sim);
+
+        car_init(&car);
     }
 
     return 0;    

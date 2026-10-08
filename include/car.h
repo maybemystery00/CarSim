@@ -8,17 +8,22 @@ typedef struct
 
 typedef struct 
 {
-    Wheel Wheels[4];
+    Wheel wheels[4];
 
     
     double speed;
+    double mass;
     
-    double accelerator;
+    double throttle;
     double brake;
     double clutch;
 
+    double drive_force;
+    double acceleration;
 
     int gear;
-}car;
+}Car;
 
+void car_init(Car *car);
+void car_update(Car *car, double dt);
 #endif
