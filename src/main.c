@@ -14,6 +14,7 @@ int main(void)
         simulation_step(&sim);
 
         car_init(&car);
+        car.throttle = 1.0;
     }
 
     return 0;    
