@@ -23,8 +23,16 @@ void car_init(Car *car)
     void car_update(Car *car , double dt)
     {
         const double max_drive_force = 2400.0;
+        const double max_brake_force = 8000.0;
+
+        double brake_force;
+
         car->drive_force = max_drive_force * car->throttle;
-        car->acceleration = car->drive_force / car->mass;
+
+        brake_force = max_brake_force *car->brake;
+        car->acceleration = 
+            (car->drive_force -brake_force) / car->mass;
+            
         car->speed += car->acceleration *dt;
     }
     
