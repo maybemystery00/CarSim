@@ -1,3 +1,12 @@
+# Compiled binaries
 *.exe
-debug.txt
-./vscode
+*.o
+
+# Build directories
+build/
+
+# VS Code
+.vscode/
+
+# Debug output
+*.log
